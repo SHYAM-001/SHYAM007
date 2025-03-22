@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface ProjectSectionProps {
+  active: string;
+}
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -65,7 +69,7 @@ export const ToggleButtonGroup = styled.div`
   }
 `;
 
-export const ToggleButton = styled.div`
+export const ToggleButton = styled.div<ProjectSectionProps>`
   padding: 8px 18px;
   border-radius: 6px;
 
