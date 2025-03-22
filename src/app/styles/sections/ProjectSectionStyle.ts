@@ -57,6 +57,7 @@ export const ToggleButtonGroup = styled.div`
   font-size: 16px;
   border-radius: 12px;
   font-weight: 500;
+  cursor:pointer;
   margin: 22px 0;
 
   @media (max-width: 768px) {

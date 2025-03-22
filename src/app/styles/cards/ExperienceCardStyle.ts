@@ -22,7 +22,7 @@ export const Role = styled.div`
   }
 `;
 
-export const Company = styled.div`
+export const Company = styled.a`
   font-size: 14px;
   font-weight: 500px;
   color: ${({ theme }) => theme.text_secondary + 99};

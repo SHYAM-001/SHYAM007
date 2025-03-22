@@ -72,7 +72,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
         />
         <Body>
           <Role>{experience.role}</Role>
-          <Company>{experience.company}</Company>
+          <Company href={experience?.website} target="_blank">{experience.company}</Company>
           <Date>{experience.date}</Date>
         </Body>
       </Top>
@@ -85,7 +85,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
               <b>Skills:</b>
               <ItemWrapper>
                 {experience.skills.map((skill, index) => (
-                  <Skill key={index}>{skill}</Skill>
+                  <Skill key={index}>{skill}{index === experience.skills.length - 1 ? "." : ","}</Skill>
                 ))}
               </ItemWrapper>
             </Skills>
