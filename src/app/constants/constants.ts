@@ -257,7 +257,7 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: "./AAILogo.jpg",
+    img: "./Photos/AAILogo.jpg",
     role: "Student Intern",
     website: "https://www.aai.aero/en/airports/chennai",
     company: "Airport Authority of India",
@@ -273,7 +273,7 @@ export const experiences = [
   },
   {
     id: 1,
-    img: "./archaic.png",
+    img: "./Photos/archaic.png",
     role: "Development Team Lead Intern",
     company: "Archaic InfoTech",
     date: "Jan 2024 – Feb 2024",
@@ -290,7 +290,7 @@ export const experiences = [
   },
   {
     id: 2,
-    img: "./yhills.jpg",
+    img: "./Photos/yhills.jpg",
     role: "Web Development Intern",
     website: "https://yhills.com/",
     company: "YHills",
@@ -308,7 +308,7 @@ export const experiences = [
   },
   {
     id: 3,
-    img: "./mrcooper.png",
+    img: "./Photos/mrcooper.png",
     role: "Software Developer Engineer Intern",
     website: "https://www.mrcooper.com/",
     company: "MrCooper",

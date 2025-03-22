@@ -87,7 +87,7 @@ const HeroSection: React.FC = () => {
             <HeroRightContainer>
               <motion.div {...headContentAnimation}>
                 <Img
-                  src={shyam}
+                  src="./Photos/shyam.png"
                   width={500}
                   height={700}
                   alt={bioData.name}
