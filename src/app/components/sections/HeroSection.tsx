@@ -5,7 +5,6 @@ import Typewriter from "typewriter-effect";
 import HeroBgAnimation from "@animations/HeroBgAnimation";
 import { motion } from "framer-motion";
 import StarsCanvas from "@canvas/Stars";
-import shyam from "@photos/shyam.png"
 import {
   headContainerAnimation,
   headContentAnimation,

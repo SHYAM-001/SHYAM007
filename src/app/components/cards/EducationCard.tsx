@@ -4,8 +4,6 @@ import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { Education } from "@components/sections/EducationSection";
 import Image from "next/image";
-import easwari from "@photos/easwari.png";
-import stjohns from "@photos/johns.jpg"
 import {
   Top,
   Body,
