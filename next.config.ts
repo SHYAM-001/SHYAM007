@@ -10,6 +10,12 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Disables Next.js image optimization (GitHub Pages doesn't support it)
     domains: ['firebasestorage.googleapis.com'],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "private-user-images.githubusercontent.com",
+      },
+    ],
   },
   eslint: {
     ignoreDuringBuilds: true, // 🚀 Ignores ESLint errors during build
