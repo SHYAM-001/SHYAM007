@@ -1,13 +1,12 @@
-"use client";
-
 import { Suspense, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
 import { StyledCanvasWrapper } from "@/app/styles/animations/StarsAnimationStyle";
+import * as THREE from "three";
 
 const Stars = () => {
-  const ref = useRef<any>(null);
+  const ref = useRef<THREE.Points>(null!);
   const [sphere] = useState(() => {
     const points = new Float32Array(5000 * 3);
     random.inSphere(points, { radius: 1.2 });
