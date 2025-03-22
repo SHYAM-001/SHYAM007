@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 
 export const Card = styled.div`
   width: 330px;
@@ -28,12 +29,10 @@ export const Tags = styled.div`
   margin-top: 4px;
 `;
 
-export const Image = styled.img`
+export const ImageSection = styled.div`
+  position: relative;
   width: 100%;
   height: 180px;
-  background-color: ${({ theme }) => theme.white};
-  border-radius: 10px;
-  box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
 `;
 
 export const Details = styled.div`
@@ -88,9 +87,7 @@ export const Members = styled.div`
   padding-left: 10px;
 `;
 
-export const Avatar = styled.img`
-  width: 38px;
-  height: 38px;
+export const Avatar = styled(Image)`
   border-radius: 50%;
   margin-left: -10px;
   background-color: ${({ theme }) => theme.white};

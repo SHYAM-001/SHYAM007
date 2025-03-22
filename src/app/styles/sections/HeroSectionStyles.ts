@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 
 export const HeroContainer = styled.div`
   display: flex;
@@ -170,9 +171,7 @@ export const ResumeButton = styled.a`
   }
 `;
 
-export const Img = styled.img`
-  width: 100%;
-  height: 100%;
+export const Img = styled(Image)`
   object-fit: cover;
 `;
 

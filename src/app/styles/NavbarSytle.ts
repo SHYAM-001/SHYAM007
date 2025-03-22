@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import Link from "next/link";
-
 
 export const Nav = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -25,7 +23,7 @@ export const NavbarContainer = styled.div`
   font-size: 1rem;
 `;
 
-export const NavLogo = styled(Link)`
+export const NavLogo = styled.a`
   width: 80%;
   padding: 0 6px;
   text-decoration: none;
@@ -57,38 +55,45 @@ export const NavItem = styled.a`
   }
 `;
 
-export const ButtonContainer = styled.div`
+export const SocialMediaContainer = styled.div`
   width: 80%;
   height: 100%;
   display: flex;
+  flex-direction: row;
+  gap: 1rem;
   justify-content: end;
   align-items: center;
-  padding: 0 6px;
+  padding: 5px 6px;
 
   @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 
-export const GithubButton = styled.a`
-  border: 1px solid ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.primary};
+export const SocialMediaPhoneContainer = styled.div`
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: end;
+  align-items: center;
+  padding: 5px 6px;
+`;
+
+export const SocialMediaLink = styled.a`
   justify-content: center;
   display: flex;
   align-items: center;
-  border-radius: 20px;
   cursor: pointer;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 500;
-  transition: all 0.6s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   text-decoration: none;
 
   &:hover {
-    background-color: ${({ theme }) => theme.primary};
-    color: ${({ theme }) => theme.bg};
+    transform: scale(1.2) translateY(-5px);
   }
 `;
+
 
 export const MobileIcon = styled.div`
   display: none;

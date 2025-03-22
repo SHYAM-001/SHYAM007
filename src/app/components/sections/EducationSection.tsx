@@ -12,15 +12,17 @@ import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import EarthCanvas from "@canvas/Earth";
 
-// Define education Type
 export interface Education {
-  title: string;
-  company: string;
+  id : number;
+  img: string;
+  school: string;
   date: string;
-  location: string;
-  description: string;
-  logo: string;
+  grade: string;
+  desc: string;
+  degree: string;
 }
+
+const educationData: Education[] = education;
 
 const EducationSection: React.FC = () => {
   return (
@@ -33,7 +35,7 @@ const EducationSection: React.FC = () => {
         </Description>
 
         <VerticalTimeline>
-          {education.map((educations, index) => (
+          {educationData.map((educations, index) => (
             <EducationCard key={`educations-${index}`} education={educations} />
           ))}
         </VerticalTimeline>

@@ -2,32 +2,37 @@
 
 import { Bio } from "@constants/constants";
 import MenuIcon from "@mui/icons-material/Menu";
+import { BioProps } from "./sections/HeroSection";
 import { useState } from "react";
+import Image from "next/image";
 import {
   Nav,
   NavbarContainer,
   NavLogo,
   NavMenu,
   NavItem,
-  ButtonContainer,
-  GithubButton,
+  SocialMediaLink,
+  SocialMediaContainer,
   MobileIcon,
   MobileNavMenu,
+  SocialMediaPhoneContainer,
 } from "@styles/NavbarSytle";
 
-const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+const bioData: BioProps = Bio;
+
+const Navbar: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   const toggleMenu = () => {
-    setMenuOpen((prevState) => !prevState);
+    setMenuOpen((prevState: boolean) => !prevState);
   };
 
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo href="/">Shyam</NavLogo>
+        <NavLogo href="#about">Shyam</NavLogo>
 
-        <MobileIcon onClick={toggleMenu}>
+        <MobileIcon onClick={toggleMenu} aria-expanded={menuOpen}>
           <MenuIcon />
         </MobileIcon>
 
@@ -61,20 +66,89 @@ const Navbar = () => {
           <NavItem href="#contact" onClick={() => setMenuOpen(false)}>
             Contact
           </NavItem>
-          <GithubButton
-            href={Bio.github}
-            target="_blank"
-            onClick={() => setMenuOpen(false)}
-          >
-            Github Profile
-          </GithubButton>
+
+          <SocialMediaPhoneContainer>
+            <SocialMediaLink
+              href={bioData.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src="./github2.png" alt="github" width={34} height={34} />
+            </SocialMediaLink>
+            <SocialMediaLink
+              href={bioData.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="./LinkedIn.png"
+                alt="linkedin"
+                width={34}
+                height={34}
+              />
+            </SocialMediaLink>
+            <SocialMediaLink
+              href={bioData.insta}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="./Instagram.png"
+                alt="instagram"
+                width={34}
+                height={34}
+              />
+            </SocialMediaLink>
+            <SocialMediaLink
+              href={bioData.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="./Facebook.png"
+                alt="facebook"
+                width={34}
+                height={34}
+              />
+            </SocialMediaLink>
+          </SocialMediaPhoneContainer>
         </MobileNavMenu>
 
-        <ButtonContainer>
-          <GithubButton href={Bio.github} target="_blank">
-            Github Profile
-          </GithubButton>
-        </ButtonContainer>
+        <SocialMediaContainer>
+          <SocialMediaLink
+            href={bioData.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src="./github2.png" alt="github" width={34} height={34} />
+          </SocialMediaLink>
+          <SocialMediaLink
+            href={bioData.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src="./LinkedIn.png" alt="linkedin" width={34} height={34} />
+          </SocialMediaLink>
+          <SocialMediaLink
+            href={bioData.insta}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="./Instagram.png"
+              alt="instagram"
+              width={34}
+              height={34}
+            />
+          </SocialMediaLink>
+          <SocialMediaLink
+            href={bioData.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src="./Facebook.png" alt="facebook" width={34} height={34} />
+          </SocialMediaLink>
+        </SocialMediaContainer>
       </NavbarContainer>
     </Nav>
   );

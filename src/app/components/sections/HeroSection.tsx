@@ -2,10 +2,9 @@
 
 import { Bio } from "@/app/constants/constants";
 import Typewriter from "typewriter-effect";
-import Tilt from "react-parallax-tilt";
 import HeroBgAnimation from "@animations/HeroBgAnimation";
 import { motion } from "framer-motion";
-import StartCanvas from "@canvas/Stars";
+import StarsCanvas from "@canvas/Stars";
 import {
   headContainerAnimation,
   headContentAnimation,
@@ -25,12 +24,38 @@ import {
   HeroBg,
 } from "@/app/styles/sections/HeroSectionStyles";
 
-const HeroSection = () => {
+
+export interface BioProps {
+  name: string;
+  roles: string[];
+  description: string;
+  github:string;
+  resume: string;
+  linkedin:string,
+  twitter: string,
+  insta: string,
+  facebook: string,
+}
+
+
+const bioData: BioProps = {
+  name: Bio.name,
+  roles: Bio.roles,
+  description: Bio.description,
+  github: Bio.github,
+  resume: Bio.resume,
+  linkedin: Bio.linkedin,
+  twitter: Bio.twitter,
+  insta: Bio.insta,
+  facebook: Bio.facebook,
+};
+
+const HeroSection: React.FC = () => {
   return (
     <div id="about">
       <HeroContainer>
         <HeroBg>
-          <StartCanvas />
+          <StarsCanvas /> 
           <HeroBgAnimation />
         </HeroBg>
         <motion.div {...headContainerAnimation}>
@@ -38,7 +63,7 @@ const HeroSection = () => {
             <HeroLeftContainer>
               <motion.div {...headTextAnimation}>
                 <Title>
-                  Hi, I&apos;m <br /> {Bio.name}
+                  Hi, I&apos;m <br /> {bioData.name}
                 </Title>
               </motion.div>
               <TextLoop>
@@ -46,7 +71,7 @@ const HeroSection = () => {
                 <Span>
                   <Typewriter
                     options={{
-                      strings: Bio.roles,
+                      strings: bioData.roles,
                       autoStart: true,
                       loop: true,
                     }}
@@ -54,16 +79,18 @@ const HeroSection = () => {
                 </Span>
               </TextLoop>
               <motion.div {...headContentAnimation}>
-                <SubTitle>{Bio.description}</SubTitle>
+                <SubTitle>{bioData.description}</SubTitle>
               </motion.div>
-              <ResumeButton>Check Resume</ResumeButton>
+              <ResumeButton href={bioData.resume} target="_blank">Check Resume</ResumeButton>
             </HeroLeftContainer>
             <HeroRightContainer>
               <motion.div {...headContentAnimation}>
-                {/* <Tilt>
-                  <Img src="/shyam.png  " alt={Bio.name} />
-                </Tilt> */}
-                <Img src="./shyam.png  " alt={Bio.name} />
+                <Img
+                  src="./shyam.png"
+                  width={500}
+                  height={700}
+                  alt={bioData.name}
+                />
               </motion.div>
             </HeroRightContainer>
           </HeroInnerContainer>

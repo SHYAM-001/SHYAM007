@@ -3,9 +3,9 @@
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { Experience } from "@components/sections/ExperienceSection";
+import Image from "next/image";
 import {
   Top,
-  Image,
   Body,
   Company,
   Role,
@@ -27,13 +27,13 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
       className="vertical-timeline-element"
       date={experience.date}
       icon={
-        <img
-          width="100%"
-          height="100%"
+        <Image
           src={experience.img}
           alt={experience.company}
+          width={50}
+          height={50}
           style={{
-            borderRadius: "50%",
+            borderRadius: "50px",
             objectFit: "cover",
           }}
         />
@@ -60,7 +60,16 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
       }}
     >
       <Top>
-        <Image src={experience?.img} alt={experience.company} />
+        <Image
+          src={experience.img}
+          alt={experience.company}
+          width={100}
+          height={100}
+          style={{
+            borderRadius: "10px",
+            objectFit: "cover",
+          }}
+        />
         <Body>
           <Role>{experience.role}</Role>
           <Company>{experience.company}</Company>
@@ -68,16 +77,16 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
         </Body>
       </Top>
       <Description>
-        {experience?.desc && <Span>{experience.desc}</Span>}
-        {experience?.skills && (
+        {experience.desc && <Span>{experience.desc}</Span>}
+        {experience.skills.length > 0 && (
           <>
             <br />
             <Skills>
               <b>Skills:</b>
               <ItemWrapper>
-              {experience?.skills?.map((skill, index) => (
-                <Skill key={`skills-${index}`}>{skill}</Skill>
-              ))}
+                {experience.skills.map((skill, index) => (
+                  <Skill key={index}>{skill}</Skill>
+                ))}
               </ItemWrapper>
             </Skills>
           </>

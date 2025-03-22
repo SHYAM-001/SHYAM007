@@ -11,15 +11,20 @@ import {
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css"; 
 
-// Define Experience Type
+
 export interface Experience {
-  title: string;
+  id: number;
+  img: string;
+  role: string;
   company: string;
   date: string;
-  location: string;
-  description: string;
-  logo: string;
+  desc: string;
+  skills: string[];
+  doc?: string; 
 }
+
+
+const experienceData: Experience[] = experiences;
 
 const ExperienceSection: React.FC = () => {
   return (
@@ -32,8 +37,8 @@ const ExperienceSection: React.FC = () => {
         </Description>
 
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={`experience-${index}`} experience={experience} />
+          {experienceData.map((experience) => (
+            <ExperienceCard key={experience.id} experience={experience} />
           ))}
         </VerticalTimeline>
       </Wrapper>

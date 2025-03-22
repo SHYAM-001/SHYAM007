@@ -2,10 +2,10 @@
 
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { education } from "@components/sections/ExperienceSection";
+import { Education } from "@components/sections/EducationSection";
+import Image from "next/image";
 import {
   Top,
-  Image,
   Body,
   School,
   Degree,
@@ -25,16 +25,16 @@ const EducationCard: React.FC<EducationCardProps> = ({ education }) => {
       className="vertical-timeline-element"
       date={education.date}
       icon={
-        <img
-          width="100%"
-          height="100%"
-          src={education.img}
-          alt={education.school}
-          style={{
-            borderRadius: "50%",
-            objectFit: "cover",
-          }}
-        />
+          <Image
+            src={education.img}
+            alt={education.school}
+            width={100}
+            height={100}
+            style={{
+              borderRadius: "50px",
+              objectFit: "cover",
+            }}
+          />
       }
       iconStyle={{
         background: "#fff",
@@ -58,7 +58,16 @@ const EducationCard: React.FC<EducationCardProps> = ({ education }) => {
       }}
     >
       <Top>
-        <Image src={education?.img} alt={education.company} />
+          <Image
+            src={education.img}
+            alt={education.school}
+            width={100}
+            height={100}
+            style={{
+              borderRadius: "10px",
+              objectFit: "cover",
+            }}
+          />
         <Body>
           <School>{education.school}</School>
           <Degree>{education.degree}</Degree>

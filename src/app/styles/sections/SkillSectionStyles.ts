@@ -105,8 +105,3 @@ export const SkillItem = styled.div`
   justify-content: center;
   gap: 8px;
 `;
-
-export const SkillImg = styled.img`
-  width: 24px;
-  height: 24px;
-`;

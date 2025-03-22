@@ -14,17 +14,31 @@ import {
 } from "@styles/sections/ProjectSectionStyle";
 import ProjectCard from "../cards/ProjectCard";
 
-export interface Project {
-  /* title: string;
-    company: string;
-    date: string;
-    location: string;
-    description: string;
-    logo: string; */
+interface Member {
+  name: string;
+  img: string;
+  linkedin: string;
+  github: string;
 }
+
+export interface Project {
+  id: number;
+  title: string;
+  date: string;
+  description: string;
+  image: string;
+  tags: string[];
+  category: string;
+  github: string;
+  webapp?: string;
+  member?: Member[];
+}
+
+const projectsData: Project[] = projects;
 
 const ProjectSection: React.FC = () => {
   const [toggle, setToggle] = useState("all");
+
   return (
     <Container id="projects">
       <Wrapper>
@@ -36,28 +50,28 @@ const ProjectSection: React.FC = () => {
 
         <ToggleButtonGroup>
           <ToggleButton
-            active={toggle === "all"}
+            data-active={toggle === "all"}
             onClick={() => setToggle("all")}
           >
             ALL
           </ToggleButton>
           <Divider />
           <ToggleButton
-            active={toggle === "web app"}
+            data-active={toggle === "web app"}
             onClick={() => setToggle("web app")}
           >
             WEB APP&apos;S
           </ToggleButton>
           <Divider />
           <ToggleButton
-            active={toggle === "android app"}
+            data-active={toggle === "android app"}
             onClick={() => setToggle("android app")}
           >
             ANDROID APP&apos;S
           </ToggleButton>
           <Divider />
           <ToggleButton
-            active={toggle === "machine learning"}
+            data-active={toggle === "machine learning"}
             onClick={() => setToggle("machine learning")}
           >
             MACHINE LEARNING
@@ -66,10 +80,10 @@ const ProjectSection: React.FC = () => {
 
         <CardContainer>
           {toggle === "all" &&
-            projects.map((project, index) => (
+            projectsData.map((project, index) => (
               <ProjectCard key={`project-${index}`} project={project} />
             ))}
-          {projects
+          {projectsData
             .filter((item) => item.category === toggle)
             .map((project, index) => (
               <ProjectCard key={`project-${index}`} project={project} />

@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
   assetPrefix: isProd ? `/${repoName}/` : "", // Ensures assets load correctly
   images: {
     unoptimized: true, // Disables Next.js image optimization (GitHub Pages doesn't support it)
+    domains: ['firebasestorage.googleapis.com'],
   },
   eslint: {
     ignoreDuringBuilds: true, // 🚀 Ignores ESLint errors during build
