@@ -5,6 +5,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { BioProps } from "./sections/HeroSection";
 import { useState } from "react";
 import Image from "next/image";
+import github  from "@photos/github2.png";
+import linkedin from "@photos/LinkedIn.png";
+import insta from "@photos/Instagram.png";
+import facebook from "@photos/Facebook.png";
 import {
   Nav,
   NavbarContainer,
@@ -70,33 +74,33 @@ const Navbar: React.FC = () => {
 
           <SocialMediaPhoneContainer>
             <SocialMediaLink href={bioData.github} target="_blank">
-              <Image src="/github2.png" alt="github" width={34} height={34} />
+              <Image src={github} alt="github" width={34} height={34} />
             </SocialMediaLink>
             <SocialMediaLink href={bioData.linkedin} target="_blank">
-              <Image src="/LinkedIn.png" alt="linkedin" width={34} height={34} />
+              <Image src={linkedin} alt="linkedin" width={34} height={34} />
             </SocialMediaLink>
             <SocialMediaLink href={bioData.insta} target="_blank">
-              <Image src="/Instagram.png" alt="instagram" width={34} height={34} />
+              <Image src={insta} alt="instagram" width={34} height={34} />
             </SocialMediaLink>
             <SocialMediaLink href={bioData.facebook} target="_blank">
-              <Image src="/Facebook.png" alt="facebook" width={34} height={34} />
+              <Image src={facebook} alt="facebook" width={34} height={34} />
             </SocialMediaLink>
           </SocialMediaPhoneContainer>
         </MobileNavMenu>
 
         <SocialMediaContainer>
-          <SocialMediaLink href={bioData.github} target="_blank">
-            <Image src="/github2.png" alt="github" width={34} height={34} />
-          </SocialMediaLink>
-          <SocialMediaLink href={bioData.linkedin} target="_blank">
-            <Image src="/LinkedIn.png" alt="linkedin" width={34} height={34} />
-          </SocialMediaLink>
-          <SocialMediaLink href={bioData.insta} target="_blank">
-            <Image src="/Instagram.png" alt="instagram" width={34} height={34} />
-          </SocialMediaLink>
-          <SocialMediaLink href={bioData.facebook} target="_blank">
-            <Image src="/Facebook.png" alt="facebook" width={34} height={34} />
-          </SocialMediaLink>
+        <SocialMediaLink href={bioData.github} target="_blank">
+              <Image src={github} alt="github" width={34} height={34} />
+            </SocialMediaLink>
+            <SocialMediaLink href={bioData.linkedin} target="_blank">
+              <Image src={linkedin} alt="linkedin" width={34} height={34} />
+            </SocialMediaLink>
+            <SocialMediaLink href={bioData.insta} target="_blank">
+              <Image src={insta} alt="instagram" width={34} height={34} />
+            </SocialMediaLink>
+            <SocialMediaLink href={bioData.facebook} target="_blank">
+              <Image src={facebook} alt="facebook" width={34} height={34} />
+            </SocialMediaLink>
         </SocialMediaContainer>
       </NavbarContainer>
     </Nav>

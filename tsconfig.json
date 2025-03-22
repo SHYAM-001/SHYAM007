@@ -28,6 +28,7 @@
       "@constants/*": ["./src/app/constants/*"],
       "@animations/*": ["./src/app/components/animations/*"],
       "@canvas/*": ["./src/app/components/canvas/*"],
+      "@photos/*":["./public/Photos/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

@@ -20,9 +20,9 @@ export default function Portfolio() {
     <ThemeProvider theme={darkTheme}>
       <Navbar />
       <Body>
-        <Suspense fallback={null}>
+        {/* <Suspense fallback={null}>
           <StartCanvas />
-        </Suspense>
+        </Suspense> */}
         <div>
           <HeroSection />
           <Wrapper>

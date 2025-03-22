@@ -5,6 +5,7 @@ import Typewriter from "typewriter-effect";
 import HeroBgAnimation from "@animations/HeroBgAnimation";
 import { motion } from "framer-motion";
 import StarsCanvas from "@canvas/Stars";
+import shyam from "@photos/shyam.png"
 import {
   headContainerAnimation,
   headContentAnimation,
@@ -86,7 +87,7 @@ const HeroSection: React.FC = () => {
             <HeroRightContainer>
               <motion.div {...headContentAnimation}>
                 <Img
-                  src="./shyam.png"
+                  src={shyam}
                   width={500}
                   height={700}
                   alt={bioData.name}
