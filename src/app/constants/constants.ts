@@ -352,7 +352,7 @@ export const projects = [
     description:
       "Quick Time is a web-based quiz application that allows users to create, manage, and participate in interactive quizzes. It provides a real-time multiplayer experience where participants can join live quiz sessions, answer questions within a time limit, and compete with others. The platform offers a no-code quiz creation experience, enabling users to design quizzes, set scoring rules, and visualize real-time leaderboards. With WebSocket-based communication, players receive instant feedback and updates on their performance.",
     image:
-      "https://private-user-images.githubusercontent.com/103324177/273425796-700766fd-177f-45d4-a579-8d2c649bec3b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDI2NjE1ODMsIm5iZiI6MTc0MjY2MTI4MywicGF0aCI6Ii8xMDMzMjQxNzcvMjczNDI1Nzk2LTcwMDc2NmZkLTE3N2YtNDVkNC1hNTc5LThkMmM2NDliZWMzYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzIyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMyMlQxNjM0NDNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03ZjgyNjJkZDg0YTU5MjJiZDE2NGY0ZDJiYjM5Yzk2ZTVlOGI3ZTJhM2U0NzhkNDE1YTUwZWJhNWU5Njg5ZTFmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.-Qf5tr0THhIhNd1qS-YmNOUy9XTSt3RLgRVbkzqemH8",
+      "./Photos/quiz.png",
     tags: [
       "HTML",
       "CSS",
@@ -373,7 +373,7 @@ export const projects = [
     description:
       "Auction is a web-based auction platform that enables users to participate in live bidding for various items in real time. The application allows sellers to list items for auction, set starting bids, and specify auction durations, while buyers can place competitive bids until the auction ends. With real-time updates powered by WebSockets, users receive instant notifications on bid activity, auction status, and winning bids. The platform provides a seamless and engaging bidding experience, ensuring transparency and fairness in the auction process.",
     image:
-      "https://private-user-images.githubusercontent.com/103324177/266062315-d5e688d4-5447-48ea-89fb-517500497b86.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDI2NjIyMTMsIm5iZiI6MTc0MjY2MTkxMywicGF0aCI6Ii8xMDMzMjQxNzcvMjY2MDYyMzE1LWQ1ZTY4OGQ0LTU0NDctNDhlYS04OWZiLTUxNzUwMDQ5N2I4Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzIyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMyMlQxNjQ1MTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iMzI1MThlZTc1ODE2YTUzZGY1MTc3Mzk1ZjM4M2Q0OTQzOTU3YzE3MTM0MmNmNDAxMWQ3M2Y0OTYzYmFkMGJiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.O5P4M6N01op4HO6dUC9b8YUhY9PxID9IZCDSK3zjesk",
+      "./Photos/auction.png",
     tags: [
       "HTML",
       "CSS",
@@ -432,7 +432,7 @@ export const projects = [
     description:
       "Wikipedia Clone is a web-based encyclopedia platform that allows users to create, edit, and browse articles on various topics. Built using Django and Django REST Framework, it provides a seamless and user-friendly experience for managing and structuring content. The platform supports Markdown formatting, enabling users to format text efficiently. With a robust search functionality and dynamic content management, users can easily explore various topics. The project ensures data persistence with SQLite and offers a collaborative editing environment similar to Wikipedia, making it a valuable knowledge-sharing platform.",
     image:
-      "https://private-user-images.githubusercontent.com/103324177/266065044-4a2eff1e-173a-4b2f-b2f8-6f6dbed49b21.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDI2NjI0NTYsIm5iZiI6MTc0MjY2MjE1NiwicGF0aCI6Ii8xMDMzMjQxNzcvMjY2MDY1MDQ0LTRhMmVmZjFlLTE3M2EtNGIyZi1iMmY4LTZmNmRiZWQ0OWIyMS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzIyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMyMlQxNjQ5MTZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zMDk2ZWMxYTljN2JhMWJmODg0ZDM3YTkzZjMxZTc3N2RmMDVhYWM4ZjMxYjQ4MTRiOWExNjMyMTdlYTRkZGMyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.klJIB4pirqFRVKlo356dERmk6d6tmsWKR-YlNSnjXDc",
+      "./Photos/wikipedia.png",
     tags: [
       "HTML",
       "CSS",
@@ -453,7 +453,7 @@ export const projects = [
     description:
       "Network is a full-stack web application inspired by Twitter, allowing users to share posts, engage with others, and interact in real-time. Built using Django and Django REST Framework for the backend, the platform ensures secure and efficient data handling. Users can create posts, like, comment, and follow other users, fostering a dynamic social media experience. The application integrates Django Channels for real-time updates and WebSocket-based live interactions. The responsive front end, developed with React, provides a seamless user experience across all devices. With a clean and intuitive interface, Network delivers a feature-rich social networking environment.",
     image:
-      "https://private-user-images.githubusercontent.com/103324177/268515714-ae7888eb-46ad-40ed-be7b-fe3f5c830b01.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDI2NjMzNDUsIm5iZiI6MTc0MjY2MzA0NSwicGF0aCI6Ii8xMDMzMjQxNzcvMjY4NTE1NzE0LWFlNzg4OGViLTQ2YWQtNDBlZC1iZTdiLWZlM2Y1YzgzMGIwMS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzIyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMyMlQxNzA0MDVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jMDVhZTVhMTQwNTUyYTEwZjk0ZDUwNzA3OTkzZjE4ZGU4NzFkNjEyNDVjNTQ5ZGRkYWZhNmIxMTU0ZGJkNWE5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.hS4lXIH3v8sEEWTR6DJL1x7El0cBRc-GnGrIXV8zeKs",
+      "./Photos/network.png",
     tags: [
       "HTML",
       "CSS",
