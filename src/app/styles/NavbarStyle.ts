@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface MobileNavMenuProps {
+  open: boolean;
+}
+
 export const Nav = styled.div`
   background-color: ${({ theme }) => theme.bg};
   color: white;
@@ -104,7 +108,7 @@ export const MobileIcon = styled.div`
   }
 `;
 
-export const MobileNavMenu = styled.ul`
+export const MobileNavMenu = styled.ul<MobileNavMenuProps>`
   display: ${({ open }) => (open ? "flex" : "none")};
   flex-direction: column;
   gap: 16px;

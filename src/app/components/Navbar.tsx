@@ -16,7 +16,8 @@ import {
   MobileIcon,
   MobileNavMenu,
   SocialMediaPhoneContainer,
-} from "@styles/NavbarSytle";
+} from "@styles/NavbarStyle";
+
 
 const bioData: BioProps = Bio;
 
@@ -24,7 +25,7 @@ const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   const toggleMenu = () => {
-    setMenuOpen((prevState: boolean) => !prevState);
+    setMenuOpen((prevState) => !prevState);
   };
 
   return (
@@ -68,85 +69,33 @@ const Navbar: React.FC = () => {
           </NavItem>
 
           <SocialMediaPhoneContainer>
-            <SocialMediaLink
-              href={bioData.github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image src="./github2.png" alt="github" width={34} height={34} />
+            <SocialMediaLink href={bioData.github} target="_blank">
+              <Image src="/github2.png" alt="github" width={34} height={34} />
             </SocialMediaLink>
-            <SocialMediaLink
-              href={bioData.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="./LinkedIn.png"
-                alt="linkedin"
-                width={34}
-                height={34}
-              />
+            <SocialMediaLink href={bioData.linkedin} target="_blank">
+              <Image src="/LinkedIn.png" alt="linkedin" width={34} height={34} />
             </SocialMediaLink>
-            <SocialMediaLink
-              href={bioData.insta}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="./Instagram.png"
-                alt="instagram"
-                width={34}
-                height={34}
-              />
+            <SocialMediaLink href={bioData.insta} target="_blank">
+              <Image src="/Instagram.png" alt="instagram" width={34} height={34} />
             </SocialMediaLink>
-            <SocialMediaLink
-              href={bioData.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="./Facebook.png"
-                alt="facebook"
-                width={34}
-                height={34}
-              />
+            <SocialMediaLink href={bioData.facebook} target="_blank">
+              <Image src="/Facebook.png" alt="facebook" width={34} height={34} />
             </SocialMediaLink>
           </SocialMediaPhoneContainer>
         </MobileNavMenu>
 
         <SocialMediaContainer>
-          <SocialMediaLink
-            href={bioData.github}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src="./github2.png" alt="github" width={34} height={34} />
+          <SocialMediaLink href={bioData.github} target="_blank">
+            <Image src="/github2.png" alt="github" width={34} height={34} />
           </SocialMediaLink>
-          <SocialMediaLink
-            href={bioData.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src="./LinkedIn.png" alt="linkedin" width={34} height={34} />
+          <SocialMediaLink href={bioData.linkedin} target="_blank">
+            <Image src="/LinkedIn.png" alt="linkedin" width={34} height={34} />
           </SocialMediaLink>
-          <SocialMediaLink
-            href={bioData.insta}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="./Instagram.png"
-              alt="instagram"
-              width={34}
-              height={34}
-            />
+          <SocialMediaLink href={bioData.insta} target="_blank">
+            <Image src="/Instagram.png" alt="instagram" width={34} height={34} />
           </SocialMediaLink>
-          <SocialMediaLink
-            href={bioData.facebook}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src="./Facebook.png" alt="facebook" width={34} height={34} />
+          <SocialMediaLink href={bioData.facebook} target="_blank">
+            <Image src="/Facebook.png" alt="facebook" width={34} height={34} />
           </SocialMediaLink>
         </SocialMediaContainer>
       </NavbarContainer>
