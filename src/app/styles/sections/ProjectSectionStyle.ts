@@ -75,8 +75,9 @@ export const ToggleButton = styled.div<ProjectSectionProps>`
   cursor: pointer;
   transition: background 0.3s ease;
 
-  background: ${({ active, theme }) => (active ? theme.primary + "20" : "transparent")};
-  
+  background: ${({ active, theme }) =>
+    active ? theme.primary + "20" : "transparent"};
+
   &:hover {
     background: ${({ theme }) => theme.primary + "40"};
   }

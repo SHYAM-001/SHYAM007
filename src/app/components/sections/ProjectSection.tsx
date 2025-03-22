@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { projects } from "@constants/constants";
+import Image from "next/image";
 import {
   Description,
   Wrapper,
@@ -64,6 +65,13 @@ const ProjectSection: React.FC = () => {
           </ToggleButton>
           <Divider />
           <ToggleButton
+            active={toggle === "tkinter software"}
+            onClick={() => setToggle("tkinter software")}
+          >
+            Tkinter Software&apos;S
+          </ToggleButton>
+          <Divider />
+          <ToggleButton
             active={toggle === "android app"}
             onClick={() => setToggle("android app")}
           >
@@ -79,11 +87,24 @@ const ProjectSection: React.FC = () => {
         </ToggleButtonGroup>
 
         <CardContainer>
-          {projectsData
-            .filter((project) => toggle === "all" || project.category === toggle)
-            .map((project, index) => (
-              <ProjectCard key={`project-${index}`} project={project} />
-            ))}
+          {projectsData.filter(
+            (project) => toggle === "all" || project.category === toggle
+          ).length > 0 ? (
+            projectsData
+              .filter(
+                (project) => toggle === "all" || project.category === toggle
+              )
+              .map((project, index) => (
+                <ProjectCard key={`project-${index}`} project={project} />
+              ))
+          ) : (
+            <Image
+              src="./Photos/comingsoon.png"
+              width={400}
+              height={300}
+              alt="comingsoon"
+            />
+          )}
         </CardContainer>
       </Wrapper>
     </Container>
