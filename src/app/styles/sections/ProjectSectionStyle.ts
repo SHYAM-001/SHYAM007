@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface ProjectSectionProps {
-  active: string;
+  active?: boolean;
 }
 
 export const Container = styled.div`
@@ -43,9 +43,9 @@ export const Title = styled.div`
 `;
 
 export const Description = styled.div`
-  font-size: 52px;
+  font-size: 18px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 400;
   margin-top: 20px;
   color: ${({ theme }) => theme.text_secondary};
 
@@ -61,7 +61,7 @@ export const ToggleButtonGroup = styled.div`
   font-size: 16px;
   border-radius: 12px;
   font-weight: 500;
-  cursor:pointer;
+  cursor: pointer;
   margin: 22px 0;
 
   @media (max-width: 768px) {
@@ -72,17 +72,19 @@ export const ToggleButtonGroup = styled.div`
 export const ToggleButton = styled.div<ProjectSectionProps>`
   padding: 8px 18px;
   border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 
+  background: ${({ active, theme }) => (active ? theme.primary + "20" : "transparent")};
+  
   &:hover {
-    background: ${({ theme }) => theme.primary + 20};
+    background: ${({ theme }) => theme.primary + "40"};
   }
 
   @media (max-width: 768px) {
     padding: 6px 8px;
     border-radius: 4px;
   }
-
-  ${({ active, theme }) => active && `background: ${theme.primary + 20};`}
 `;
 
 export const Divider = styled.div`

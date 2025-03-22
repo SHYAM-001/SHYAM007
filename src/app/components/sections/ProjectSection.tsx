@@ -50,28 +50,28 @@ const ProjectSection: React.FC = () => {
 
         <ToggleButtonGroup>
           <ToggleButton
-            data-active={toggle === "all"}
+            active={toggle === "all"}
             onClick={() => setToggle("all")}
           >
             ALL
           </ToggleButton>
           <Divider />
           <ToggleButton
-            data-active={toggle === "web app"}
+            active={toggle === "web app"}
             onClick={() => setToggle("web app")}
           >
             WEB APP&apos;S
           </ToggleButton>
           <Divider />
           <ToggleButton
-            data-active={toggle === "android app"}
+            active={toggle === "android app"}
             onClick={() => setToggle("android app")}
           >
             ANDROID APP&apos;S
           </ToggleButton>
           <Divider />
           <ToggleButton
-            data-active={toggle === "machine learning"}
+            active={toggle === "machine learning"}
             onClick={() => setToggle("machine learning")}
           >
             MACHINE LEARNING
@@ -79,12 +79,8 @@ const ProjectSection: React.FC = () => {
         </ToggleButtonGroup>
 
         <CardContainer>
-          {toggle === "all" &&
-            projectsData.map((project, index) => (
-              <ProjectCard key={`project-${index}`} project={project} />
-            ))}
           {projectsData
-            .filter((item) => item.category === toggle)
+            .filter((project) => toggle === "all" || project.category === toggle)
             .map((project, index) => (
               <ProjectCard key={`project-${index}`} project={project} />
             ))}
