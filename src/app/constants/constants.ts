@@ -336,7 +336,7 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: "./easwari.png",
+    img: "./Photos/easwari.png",
     school: "Easwari Engineering College",
     date: "Nov 2021 - Apr 2025",
     grade: "8.89 CGPA",
@@ -345,7 +345,7 @@ export const education = [
   },
   {
     id: 1,
-    img: "./johns.jpg",
+    img: "./Photos/johns.jpg",
     school: "St. John's Matriculation Higher Secondary School",
     date: "Apr 2019 - Apr 2021",
     grade: "93%",
@@ -354,7 +354,7 @@ export const education = [
   },
   {
     id: 2,
-    img: "./johns.jpg",
+    img: "./Photos/johns.jpg",
     school: "St. John's Matriculation Higher Secndary School",
     date: "Apr 2018 - Apr 2019",
     grade: "90%",
