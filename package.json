@@ -20,6 +20,7 @@
     "emailjs": "^4.0.3",
     "framer-motion": "^12.4.13",
     "jotai": "^2.12.2",
+    "lucide-react": "^0.483.0",
     "maath": "^0.10.8",
     "next": "15.2.2",
     "portfolio": "file:",

@@ -1,6 +1,4 @@
-
 import styled from "styled-components";
-
 
 export const AchievementContainer = styled.div`
   display: flex;
@@ -17,8 +15,6 @@ export const AchievementContainer = styled.div`
   @media screen and (max-width: 640px) {
     padding: 32px 16px;
   }
-
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
 
 export const Description = styled.div`
@@ -40,7 +36,7 @@ export const AchievementInnerContainer = styled.div`
   position: relative;
   padding: 80px 30px;
   width: 100%;
-  height: 100vh; 
+  height: 100vh;
   z-index: 1;
 
   @media screen and (max-width: 960px) {
@@ -70,5 +66,19 @@ export const Title = styled.div`
   @media (max-width: 768px) {
     margin-top: 12px;
     font-size: 32px;
+  }
+`;
+
+export const UIDescription = styled.div`
+  padding: 4px;
+  font-size: 32px;
+  font-weight:600;
+  color: ${({theme}) => theme.text_secondary};
+  text-align: center;
+  margin-top: 40rem;  
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    margin-top:23rem;
   }
 `;

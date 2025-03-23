@@ -1,6 +1,6 @@
 import { Loader } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Experience } from "@components/sections/Experience";
 import { UI } from "@components/canvas/UI";
 import {
@@ -12,10 +12,18 @@ import {
 } from "@styles/sections/AchievementSectionStyle";
 
 const AchievementSections: React.FC = () => {
+  const [cameraPosition, setCameraPosition] = useState(6);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCameraPosition(window.innerWidth > 800 ? 3 : 5);
+    }
+  }, []);
+
   return (
     <AchievementContainer id="achievements">
       <Title>Achievements</Title>
-      <Description>Some of the achievements so far till now.</Description>
+      <Description>A Glimpse of My Achievements So Far</Description>
       <AchievementInnerContainer>
         <UI />
         <CanvasWrapper>
@@ -24,7 +32,7 @@ const AchievementSections: React.FC = () => {
             shadows
             style={{ width: "100%", height: "100%" }}
             camera={{
-              position: [-0.5, 1, window.innerWidth > 800 ? 4 : 6],
+              position: [-0.5, 1, cameraPosition],
               fov: 45,
             }}
           >
