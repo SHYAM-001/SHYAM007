@@ -168,7 +168,7 @@ const Page: React.FC<PageProps> = ({ number, front, back, page, opened, bookClos
     mesh.add(skeleton.bones[0]);
     mesh.bind(skeleton);
     return mesh;
-  }, []);
+  }, [number, picture, picture2, pictureRoughness]);
 
   // useHelper(skinnedMeshRef, SkeletonHelper, "red");
 
