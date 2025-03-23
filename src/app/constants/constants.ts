@@ -314,6 +314,8 @@ export const experiences = [
   },
 ];
 
+export const achievements = [];
+
 export const education = [
   {
     id: 0,
@@ -351,8 +353,7 @@ export const projects = [
     date: "Oct 2023 - Jan 2024",
     description:
       "Quick Time is a web-based quiz application that allows users to create, manage, and participate in interactive quizzes. It provides a real-time multiplayer experience where participants can join live quiz sessions, answer questions within a time limit, and compete with others. The platform offers a no-code quiz creation experience, enabling users to design quizzes, set scoring rules, and visualize real-time leaderboards. With WebSocket-based communication, players receive instant feedback and updates on their performance.",
-    image:
-      "./Photos/quiz.png",
+    image: "./Photos/quiz.png",
     tags: [
       "HTML",
       "CSS",
@@ -372,8 +373,7 @@ export const projects = [
     date: "Aug 2023 - Sep 2023",
     description:
       "Auction is a web-based auction platform that enables users to participate in live bidding for various items in real time. The application allows sellers to list items for auction, set starting bids, and specify auction durations, while buyers can place competitive bids until the auction ends. With real-time updates powered by WebSockets, users receive instant notifications on bid activity, auction status, and winning bids. The platform provides a seamless and engaging bidding experience, ensuring transparency and fairness in the auction process.",
-    image:
-      "./Photos/auction.png",
+    image: "./Photos/auction.png",
     tags: [
       "HTML",
       "CSS",
@@ -431,8 +431,7 @@ export const projects = [
     date: "Jan 2023 - Feb 2023",
     description:
       "Wikipedia Clone is a web-based encyclopedia platform that allows users to create, edit, and browse articles on various topics. Built using Django and Django REST Framework, it provides a seamless and user-friendly experience for managing and structuring content. The platform supports Markdown formatting, enabling users to format text efficiently. With a robust search functionality and dynamic content management, users can easily explore various topics. The project ensures data persistence with SQLite and offers a collaborative editing environment similar to Wikipedia, making it a valuable knowledge-sharing platform.",
-    image:
-      "./Photos/wikipedia.png",
+    image: "./Photos/wikipedia.png",
     tags: [
       "HTML",
       "CSS",
@@ -452,8 +451,7 @@ export const projects = [
     date: "Feb 2023 - May 2023",
     description:
       "Network is a full-stack web application inspired by Twitter, allowing users to share posts, engage with others, and interact in real-time. Built using Django and Django REST Framework for the backend, the platform ensures secure and efficient data handling. Users can create posts, like, comment, and follow other users, fostering a dynamic social media experience. The application integrates Django Channels for real-time updates and WebSocket-based live interactions. The responsive front end, developed with React, provides a seamless user experience across all devices. With a clean and intuitive interface, Network delivers a feature-rich social networking environment.",
-    image:
-      "./Photos/network.png",
+    image: "./Photos/network.png",
     tags: [
       "HTML",
       "CSS",
@@ -462,7 +460,7 @@ export const projects = [
       "SQlite",
       "Django Rest Framework",
       "Django Channels",
-      "BootStrap"
+      "BootStrap",
     ],
     category: "web app",
     github: "https://github.com/SHYAM-001/Network",
@@ -475,7 +473,7 @@ export const projects = [
       " A Todo Web App made with React JS, Redux, and Material UI. It has a login page where users can log in with their Google account. It has a sidebar where users can see all the tasks and can create a new task. It has a calendar where users can see all the tasks on a particular date. It has a search bar where users can search for a particular task.",
     image:
       "https://camo.githubusercontent.com/3ad28aa710d18525f1fc87de056ed53c706d09979589bfd5a773df36653bad38/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f6c6f67696e2d65613565322e61707073706f742e636f6d2f6f2f4255434b4f49442532302831292e706e673f616c743d6d6564696126746f6b656e3d32653735376235372d323964372d346263612d613562322d653164346538313432373435",
-    tags: ["Next Js","Redux","Tailwind CSS", "Local Storage", "Node JS"],
+    tags: ["Next Js", "Redux", "Tailwind CSS", "Local Storage", "Node JS"],
     category: "web app",
     github: "https://github.com/SHYAM-001/Todo-React-Redux",
   },
@@ -487,11 +485,7 @@ export const projects = [
       "The Simple Calculator is a Python-based desktop application designed to perform basic arithmetic operations with a user-friendly interface. Developed using Tkinter, it provides a smooth and intuitive experience for users who need quick and efficient calculations.",
     image:
       "https://user-images.githubusercontent.com/54413533/63547123-228abe00-c534-11e9-828a-c13927a05c40.jpg",
-    tags: [
-      "Python",
-      "TKinter",
-      "Canvas",
-    ],
+    tags: ["Python", "TKinter", "Canvas"],
     category: "tkinter software",
     github: "https://github.com/SHYAM-001/SIMPLE-CALCULATOR",
   },
@@ -501,14 +495,8 @@ export const projects = [
     date: "Dec 2021",
     description:
       "Crime Management is a Python-based desktop application designed for efficiently managing and analyzing crime records. Built using Tkinter for the graphical user interface (GUI) and MySQL for database management, this software provides an intuitive and user-friendly platform for law enforcement agencies and administrative personnel to record, update, and retrieve crime-related data.",
-    image:
-      "./Photos/crime.jpg",
-    tags: [
-      "Python",
-      "TKinter",
-      "Canvas",
-      "MYSQL",
-    ],
+    image: "./Photos/crime.jpg",
+    tags: ["Python", "TKinter", "Canvas", "MYSQL"],
     category: "tkinter software",
     github: "https://github.com/SHYAM-001/Crime_Management-CRUD",
   },

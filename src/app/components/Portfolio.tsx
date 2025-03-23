@@ -12,6 +12,7 @@ import ContactSection from "@components/sections/ContactSection";
 import Footer from "@components/Footer";
 import { Suspense, lazy } from "react";
 import { Body, Wrapper } from "@/app/styles/PortfolioStyle";
+import AchievementSections from "@components/sections/AchievementSections";
 
 const StartCanvas = lazy(() => import("@canvas/Stars"));
 
@@ -29,6 +30,7 @@ export default function Portfolio() {
             <SkillSection />
             <ExperienceSection />
           </Wrapper>
+          <AchievementSections/>
           <ProjectSection />
           <Wrapper>
             <EducationSection />

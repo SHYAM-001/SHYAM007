@@ -65,6 +65,8 @@ export const SocialMediaContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  margin-left: 4rem;
+  margin-right: -2rem;
   justify-content: end;
   align-items: center;
   padding: 5px 6px;
@@ -97,7 +99,6 @@ export const SocialMediaLink = styled.a`
     transform: scale(1.2) translateY(-5px);
   }
 `;
-
 
 export const MobileIcon = styled.div`
   display: none;
