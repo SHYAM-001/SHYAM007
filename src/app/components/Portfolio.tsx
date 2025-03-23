@@ -10,27 +10,21 @@ import EducationSection from "@components/sections/EducationSection";
 import ProjectSection from "@components/sections/ProjectSection";
 import ContactSection from "@components/sections/ContactSection";
 import Footer from "@components/Footer";
-import { Suspense, lazy } from "react";
 import { Body, Wrapper } from "@/app/styles/PortfolioStyle";
 import AchievementSections from "@components/sections/AchievementSections";
-
-const StartCanvas = lazy(() => import("@canvas/Stars"));
 
 export default function Portfolio() {
   return (
     <ThemeProvider theme={darkTheme}>
       <Navbar />
       <Body>
-        <Suspense fallback={null}>
-          <StartCanvas />
-        </Suspense>
         <div>
           <HeroSection />
           <Wrapper>
             <SkillSection />
             <ExperienceSection />
           </Wrapper>
-          <AchievementSections/>
+          <AchievementSections />
           <ProjectSection />
           <Wrapper>
             <EducationSection />
