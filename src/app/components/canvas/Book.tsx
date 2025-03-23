@@ -199,7 +199,7 @@ const Page: React.FC<PageProps> = ({ number, front, back, page, opened, bookClos
 
     const bones = skinnedMeshRef.current.skeleton.bones;
     for (let i = 0; i < bones.length; i++) {
-      const target = i === 0 ? group.current : bones[i];
+      const target = i === 0 && group.current  ? group.current : bones[i];
 
       const insideCurveIntensity = i < 8 ? Math.sin(i * 0.2 + 0.25) : 0;
       const outsideCurveIntensity = i >= 8 ? Math.cos(i * 0.3 + 0.09) : 0;
