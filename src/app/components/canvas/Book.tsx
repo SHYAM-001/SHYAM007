@@ -53,8 +53,8 @@ pageGeometry.translate(PAGE_WIDTH / 2, 0, 0);
 
 const position = pageGeometry.attributes.position;
 const vertex = new Vector3();
-const skinIndexes:number[] = [];
-const skinWeights:number[] = [];
+const skinIndexes: number[] = [];
+const skinWeights: number[] = [];
 
 for (let i = 0; i < position.count; i++) {
   // ALL VERTICES
@@ -96,15 +96,23 @@ const pageMaterials = [
 ];
 
 pages.forEach((page) => {
-  useTexture.preload(`./textures/${page.front}.jpg`);
-  useTexture.preload(`./textures/${page.back}.jpg`);
+  useTexture.preload(page.front);
+  useTexture.preload(page.back);
   useTexture.preload(`./textures/book-cover-roughness.jpg`);
 });
 
-const Page: React.FC<PageProps> = ({ number, front, back, page, opened, bookClosed, ...props }) => {
+const Page: React.FC<PageProps> = ({
+  number,
+  front,
+  back,
+  page,
+  opened,
+  bookClosed,
+  ...props
+}) => {
   const [picture, picture2, pictureRoughness] = useTexture([
-    `./textures/${front}.jpg`,
-    `./textures/${back}.jpg`,
+    front,
+    back,
     ...(number === 0 || number === pages.length - 1
       ? [`./textures/book-cover-roughness.jpg`]
       : []),
@@ -189,7 +197,8 @@ const Page: React.FC<PageProps> = ({ number, front, back, page, opened, bookClos
       turnedAt.current = +new Date();
       lastOpened.current = opened;
     }
-    let turningTime = Math.min(400, new Date().getTime() - Number(turnedAt.current)) / 400;
+    let turningTime =
+      Math.min(400, new Date().getTime() - Number(turnedAt.current)) / 400;
     turningTime = Math.sin(turningTime * Math.PI);
 
     let targetRotation = opened ? -Math.PI / 2 : Math.PI / 2;
@@ -199,7 +208,7 @@ const Page: React.FC<PageProps> = ({ number, front, back, page, opened, bookClos
 
     const bones = skinnedMeshRef.current.skeleton.bones;
     for (let i = 0; i < bones.length; i++) {
-      const target = i === 0 && group.current  ? group.current : bones[i];
+      const target = i === 0 && group.current ? group.current : bones[i];
 
       const insideCurveIntensity = i < 8 ? Math.sin(i * 0.2 + 0.25) : 0;
       const outsideCurveIntensity = i >= 8 ? Math.cos(i * 0.3 + 0.09) : 0;

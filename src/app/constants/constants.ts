@@ -317,23 +317,23 @@ export const experiences = [
 export const achievements = [
   {
     id:0,
-    img:"siren_squad",
+    img:"./textures/siren_squad.jpg",
     date:"Jun 2024",
   },
   {
     id:1,
-    img:"group_photo",
+    img:"./textures/group_photo.jpg",
     desc:"Winner of the Datathon conducted by the Karnataka State Police (KSP), powered by Hack2Skill, with Microsoft as the technological partner.",
     date:"Jun 2024",
   },
   {
     id:2,
-    img:"main",
+    img:"./textures/main.jpg",
     date:"Jan 2023 - Dec 2024",
   },
   {
     id:3,
-    img:"main1",
+    img:"./textures/main1.jpg",
     desc:"Served as an Event Organizer at ISTE, conducting various technical events for ISTE members at Easwari Engineering College.",
     date:"Jan 2023 - Dec 2024",
   },

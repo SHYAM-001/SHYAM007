@@ -24,7 +24,7 @@ interface Page {
 
 export const pages: Page[] = [
   {
-    front: "book-cover",
+    front: "./textures/book-cover.jpg",
     back: pictures[0],
   },
 ];
@@ -39,7 +39,7 @@ for (let i = 1; i < pictures.length - 1; i += 2) {
 
 pages.push({
   front: pictures[pictures.length - 1],
-  back: "book-back",
+  back: "./textures/book-back.jpg",
   description: achievementsData[pictures.length - 1]?.desc,
 });
 
