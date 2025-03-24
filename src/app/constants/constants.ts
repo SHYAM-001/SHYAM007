@@ -328,12 +328,12 @@ export const achievements = [
   },
   {
     id:2,
-    img:"./textures/main.jpg",
+    img:"./textures/main.JPG",
     date:"Jan 2023 - Dec 2024",
   },
   {
     id:3,
-    img:"./textures/main1.jpg",
+    img:"./textures/main1.JPG",
     desc:"Served as an Event Organizer at ISTE, conducting various technical events for ISTE members at Easwari Engineering College.",
     date:"Jan 2023 - Dec 2024",
   },
