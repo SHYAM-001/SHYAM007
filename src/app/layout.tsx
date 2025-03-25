@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { LoadingProvider } from "@context/LoadingContext";
 
 import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -26,7 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${geistMono.variable} antialiased`}>
-        {children}
+      <LoadingProvider>
+      {children}
+    </LoadingProvider>
       </body>
     </html>
   );

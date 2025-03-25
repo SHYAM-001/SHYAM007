@@ -2,6 +2,7 @@
 
 import { useRef, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
+import dynamic from "next/dynamic";
 import {
   Container,
   Title,
@@ -21,31 +22,18 @@ const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY as string;
 const ContactSection: React.FC = () => {
   const form = useRef<HTMLFormElement | null>(null);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!form.current) return;
 
-    if (!form.current) {
-      console.error("Form reference is null");
-      return;
+    try {
+      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY);
+      alert("Message Sent Successfully!");
+      form.current?.reset();
+    } catch (error) {
+      console.error("Email sending failed:", error);
+      alert("Failed to send message. Please try again.");
     }
-
-    emailjs
-      .sendForm(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        form.current,
-        PUBLIC_KEY
-      )
-      .then(
-        () => {
-          alert("Message Sent Successfully!");
-          form.current?.reset();
-        },
-        (error) => {
-          console.error("Email sending failed:", error);
-          alert("Failed to send message. Please try again.");
-        }
-      );
   };
 
   return (
@@ -57,39 +45,12 @@ const ContactSection: React.FC = () => {
         </Description>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email me 🚀</ContactTitle>
-
-          <ContactInput
-            type="email"
-            placeholder="Your Email"
-            name="sender_email"
-            required
-          />
-          <ContactInput
-            type="text"
-            placeholder="Your Name"
-            name="from_name"
-            required
-          />
+          <ContactInput type="email" placeholder="Your Email" name="sender_email" required />
+          <ContactInput type="text" placeholder="Your Name" name="from_name" required />
           <ContactInput type="hidden" name="to_name" value="Tony Stock" />
-          <ContactInput
-            type="tel"
-            placeholder="Phone Number"
-            name="phone_no"
-            required
-          />
-          <ContactInput
-            type="text"
-            placeholder="Subject"
-            name="subject"
-            required
-          />
-          <ContactInputMessage
-            placeholder="Message"
-            name="message"
-            rows={4}
-            required
-          />
-
+          <ContactInput type="tel" placeholder="Phone Number" name="phone_no" required />
+          <ContactInput type="text" placeholder="Subject" name="subject" required />
+          <ContactInputMessage placeholder="Message" name="message" rows={4} required />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
       </Wrapper>
@@ -97,4 +58,4 @@ const ContactSection: React.FC = () => {
   );
 };
 
-export default ContactSection;
+export default dynamic(() => Promise.resolve(ContactSection), { ssr: false }); // Lazy loaded

@@ -1,6 +1,7 @@
 "use client";
 
 import { skills } from "@constants/constants";
+import dynamic from "next/dynamic";
 import Tilt from "react-parallax-tilt";
 import Image from "next/image";
 import {
@@ -26,20 +27,16 @@ interface SkillProps {
 
 const SkillData: SkillProps[] = skills;
 
-
-const SkillSection: React.FC =  () => {
+const SkillSection: React.FC = () => {
   return (
     <Container id="skills">
       <Wrapper>
         <Title>Skills</Title>
-        <Description>
-          Here are some of my skills on which I have been Wroked past 1 years.
-        </Description>
-
+        <Description>Here are some of my skills I have worked on in the past year.</Description>
         <SkillsContainer>
           {SkillData.map((skill, index) => (
             <Tilt key={`skill-${index}`}>
-              <Skill key={`skill-${index}`}>
+              <Skill>
                 <SkillTitle>{skill.title}</SkillTitle>
                 <SkillList>
                   {skill.skills.map((item, index_x) => (
@@ -58,4 +55,4 @@ const SkillSection: React.FC =  () => {
   );
 };
 
-export default SkillSection;
+export default dynamic(() => Promise.resolve(SkillSection), { ssr: false }); // Lazy loaded
